@@ -10,8 +10,12 @@ import { routes } from "./controller/routes";
 import { usermanagementDB } from './app/database';
 import cookieParser from 'cookie-parser'
 import path from 'path'
+import {memcached} from "./config/memcached"
 
 const port = process.env.PORT
+
+app.locals.memcached = memcached;
+
 
 app.use(cors({
   // credentials: true,
@@ -19,6 +23,7 @@ app.use(cors({
 
   origin:'*' //sementara dibuat wildcard dulu
 }))
+
 
 
 app.use(cookieParser())
