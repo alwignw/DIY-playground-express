@@ -9,7 +9,7 @@ const dbConfig: DatabaseConfig = {
     username: process.env[`DB_USER_${[process.env.NODE_ENV]}`] ?? "",
     password: process.env[`DB_PWD_${[process.env.NODE_ENV]}`] ?? "",
     host: process.env[`DB_HOST_${[process.env.NODE_ENV]}`] ?? "127.0.0.1",
-    dialect: 'mssql',
+    dialect: 'postgres',
     dialectOptions: {
         useUTC: false, // for reading from database
     },

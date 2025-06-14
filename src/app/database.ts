@@ -12,3 +12,4 @@ const createInstance = (database:string) : Sequelize => {
 }
 
 export const usermanagementDB = createInstance('usermanagement')
+export const temanhealingDB = createInstance('teman_healing')
